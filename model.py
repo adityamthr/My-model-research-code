@@ -88,7 +88,7 @@ if __name__ == "__main__":
 
     # Extract price and IV series
     prices = df['close'].values
-    iv = df['iv'].values  # assumed already aligned with prices (or interpolated from options data)
+    iv = df['iv'].values  # gotcha take this beyaaaaccc... from options data
 
     model = VolPredictor(window=25, horizon=10)
     model.fit(prices, iv)
